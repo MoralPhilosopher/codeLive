@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: #1e1e1e;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  background-color: #1e1e1e;
+}
+
+.home-content {
+  background-color: #252526;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+.home-title {
+  margin-bottom: 1.5rem;
+  color: #d4d4d4;
+  font-size: 2rem;
+}
+
+.home-input-group {
+  margin-bottom: 1.5rem;
+}
+
+.home-input {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #d4d4d4;
+}
+
+.home-input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.home-button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.home-button {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.join-button {
+  background-color: #3a3d41;
+  color: #d4d4d4;
+}
+
+.join-button:hover {
+  background-color: #45494e;
+}
+
+.create-button {
+  background-color: #0e639c;
+  color: white;
+}
+
+.create-button:hover {
+  background-color: #1177bb;
+}

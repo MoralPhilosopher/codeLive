@@ -1,0 +1,12 @@
+.container {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+select, button {
+  margin: 1rem 0;
+}
+pre {
+  background: #111;
+  color: #0f0;
+  padding: 1rem;
+}

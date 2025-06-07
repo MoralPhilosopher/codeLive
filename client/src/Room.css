@@ -1,0 +1,206 @@
+.leetcode-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: white;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.room-id {
+  font-size: 14px;
+}
+
+.room-id code {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.language-select {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #3a3f4b;
+  color: white;
+  font-size: 14px;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.editor-panel {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.io-panel {
+  width: 350px;
+  background-color: #1e1e1e;
+  border-left: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.run-section {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.run-button {
+  width: 100%;
+  padding: 8px;
+  background-color: #3a3f4b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.run-button:hover {
+  background-color: #4a4f5b;
+}
+
+.input-section, .output-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.section-header {
+  padding: 10px;
+  background-color: #252526;
+  color: #ccc;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.input-textarea {
+  flex: 1;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border: none;
+  resize: none;
+  padding: 10px;
+  font-family: monospace;
+  outline: none;
+  border-bottom: 1px solid #333;
+}
+
+.output-content {
+  flex: 1;
+  padding: 10px;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  color: #d4d4d4;
+  background-color: #1e1e1e;
+}
+
+/* Add these new styles at the end of your existing CSS */
+.toolbar-btn {
+  padding: 5px 10px;
+  margin-right: 8px;
+  background-color: #3a3d41;
+  border: none;
+  border-radius: 4px;
+  color: #d4d4d4;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toolbar-btn:hover {
+  background-color: #45494e;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Header styling */
+.header {
+  background-color: #252526; /* Darker than editor background */
+  border-bottom: 1px solid #333;
+  padding: 10px 20px;
+}
+
+/* Room ID section */
+.room-id {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.room-id code {
+  background: #3a3d41;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.copy-id-btn {
+  background: none;
+  border: none;
+  color: #d4d4d4;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.copy-id-btn:hover {
+  background-color: #3a3d41;
+}
+
+/* Toolbar buttons */
+.toolbar-btn {
+  padding: 5px 12px;
+  margin-right: 10px;
+  background-color: #3a3d41;
+  border: none;
+  border-radius: 4px;
+  color: #d4d4d4;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.toolbar-btn:hover {
+  background-color: #45494e;
+}
+
+/* Language select */
+.language-select {
+  padding: 5px 10px;
+  background-color: #3a3d41;
+  border: none;
+  border-radius: 4px;
+  color: #d4d4d4;
+  cursor: pointer;
+}
