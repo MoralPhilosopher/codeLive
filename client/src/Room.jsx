@@ -8,7 +8,7 @@ import { oneDark } from '@codemirror/theme-one-dark';
 import { useParams } from 'react-router-dom';
 import './Room.css';
 
-const socket = io('http://localhost:5002');
+const socket = io('https://codelive-mtt1.onrender.com/');
 
 export default function Room() {
   const { roomId } = useParams();
