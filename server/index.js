@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: { 
-    origin:'https://codelive-1-ovb6.onrender.com/',
+    origin:'https://codelive-1-ovb6.onrender.com',
     methods: ['GET', 'POST']
   }
 });
