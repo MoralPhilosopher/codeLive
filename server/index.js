@@ -5,7 +5,9 @@ import http from 'http';
 import { spawn } from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import cron from 'node-cron';
+import axios from 'axios';
+
 
 const __dirname = path.resolve();
 
@@ -137,6 +139,16 @@ catch(err){
   console.log(err);
   
 }
+
+// Ping the server every 13 minutes
+cron.schedule('*/13 * * * *', async () => {
+  try {
+    const res = await axios.get('https://codelive-mtt1.onrender.com');
+    console.log(`Ping successful: ${res.status}`);
+  } catch (error) {
+    console.error('Ping failed:', error.message);
+  }
+});
 
 // Start Server
 const PORT = process.env.PORT || 5002;
