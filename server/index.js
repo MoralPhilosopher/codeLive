@@ -1,25 +1,30 @@
-const express = require('express');
-const cors = require('cors');
-const { Server } = require('socket.io');
-const http = require('http');
-const { spawn } = require('child_process');
-const fs = require('fs');
-const { promisify } = require('util');
-const writeFile = promisify(fs.writeFile);
-const unlink = promisify(fs.unlink);
+import express from 'express';
+import cors from 'cors';
+import { Server } from 'socket.io';
+import http from 'http';
+import { spawn } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.resolve();
 
 const app = express();
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: { 
-    origin:'https://codelive-1-ovb6.onrender.com',
+    origin: '*',
     methods: ['GET', 'POST']
   }
 });
 
 app.use(cors());
 app.use(express.json());
+
+// Promisify fs methods
+const writeFile = fs.promises.writeFile;
+const unlink = fs.promises.unlink;
 
 // Socket.IO Logic
 io.on('connection', (socket) => {
@@ -121,6 +126,17 @@ app.post('/run', async (req, res) => {
     res.status(500).json({ output: err.message });
   }
 });
+
+app.use(express.static(path.join(__dirname, "./client/dist")));
+try{
+app.get(/(.*)/, (req, res) => {
+    res.sendFile(path.join(__dirname, "./client", "dist", "index.html"));
+  });
+}
+catch(err){
+  console.log(err);
+  
+}
 
 // Start Server
 const PORT = process.env.PORT || 5002;
